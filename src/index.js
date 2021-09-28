@@ -13,7 +13,13 @@ import Feature from "./components/Feature";
 import reducers from "./reducers";
 import { applyMiddleware } from "redux";
 
-const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+const store = createStore(
+  reducers,
+  {
+    auth: { authenticated: localStorage.getItem("token") },
+  },
+  applyMiddleware(reduxThunk)
+);
 
 ReactDOM.render(
   <Provider store={store}>

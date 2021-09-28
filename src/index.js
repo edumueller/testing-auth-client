@@ -10,6 +10,7 @@ import App from "./components/App";
 import Welcome from "./components/Welcome";
 import Signup from "./components/auth/Signup";
 import Feature from "./components/Feature";
+import Signout from "./components/auth/Signout";
 import reducers from "./reducers";
 import { applyMiddleware } from "redux";
 
@@ -28,6 +29,7 @@ ReactDOM.render(
         <Route path="/" exact component={Welcome} />
         <Route path="/feature" exact component={Feature} />
         <Route path="/signup" exact component={Signup} />
+        <Route path="/signout" exact component={Signout} />
       </App>
     </BrowserRouter>
   </Provider>,
